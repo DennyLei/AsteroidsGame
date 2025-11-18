@@ -1,5 +1,6 @@
 Spaceship bob = new Spaceship();
 Star[] susan = new Star[100];
+Asteroid ninja = new Asteroid();
 public void setup() 
 {
   size(400,400);
@@ -15,6 +16,8 @@ public void draw()
   }
   bob.move();
   bob.show();
+  ninja.show();
+  ninja.move();
 }
  public void keyPressed(){
      if(key == 'w'){
