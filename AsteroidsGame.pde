@@ -2,7 +2,6 @@ Spaceship bob = new Spaceship();
 ArrayList <Bullet> dog = new ArrayList <Bullet>();
 Star[] susan = new Star[100];
 ArrayList <Asteroid> hello = new ArrayList<Asteroid>();
-PImage img;
 public void setup() 
 {
   size(400,400);
@@ -39,7 +38,6 @@ public void setup()
     }
   }
   }
-  img = loadImage("chan.png");
 }
 public void draw() 
 {
@@ -69,8 +67,6 @@ public void draw()
     bob.hyperspace();
     for(int i=0;i<hello.size();i++)
       hello.remove(i);
-    image(img, 0, 0);
-    textSize(25);
     fill(0);
     text("Darth Vader Chan got you", 0, 200); 
   }
