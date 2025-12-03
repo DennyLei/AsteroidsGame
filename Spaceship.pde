@@ -1,6 +1,7 @@
 public class Spaceship extends Floater  
 {   
-    Spaceship(){
+    private int health = 3;
+    public Spaceship(){
        corners = 3;  
        xCorners = new int[]{-8, 16, -8};   
        yCorners = new int[]{-8, 0, 8};
@@ -11,32 +12,34 @@ public class Spaceship extends Floater
        myYspeed = 0;  
        myPointDirection = 0;
     }
-    public void setXspeed(double x) {
-        myXspeed = x;
-     }
-    public void setYspeed(double y) {
-        myYspeed = y;
-     }
     public double getX() {
         return myCenterX;
      }
     public double getY() {
         return myCenterY;
      }
-    public void setPointDirection(double direction) {
-        myPointDirection = direction;
+    public double getXspeed() {
+        return myXspeed;
      }
-    public void setCenterX(double centerx) {
-        myCenterX = centerx;
+    public double getYspeed() {
+        return myYspeed;
      }
-     public void setCenterY(double centery) {
-        myCenterY = centery;
+    public double getPointDirection() {
+        return myPointDirection;
      }
+    public void setLife(){
+        health--;
+     }
+    public int getLife(){
+        return health;
+     }
+
+
     public void hyperspace(){
-       setXspeed(0);
-       setYspeed(0);
-       setPointDirection((int)(Math.random()*300));
-       setCenterX((int)(Math.random()*300));
-       setCenterY((int)(Math.random()*300));
+       myXspeed = 0;
+       myYspeed = 0;
+       myPointDirection = (int)(Math.random()*360);
+       myCenterX = (int)(Math.random()*300);
+       myCenterY = (int)(Math.random()*300);
     }
 }
