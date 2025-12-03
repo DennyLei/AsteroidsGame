@@ -39,7 +39,7 @@ public void setup()
     }
   }
   }
-img = loadImage("chan.png");
+  img = loadImage("chan.png");
 }
 public void draw() 
 {
